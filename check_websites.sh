@@ -4,7 +4,7 @@
 check_connectivity() {
     while IFS= read -r website; do
         echo "Browsing $website..."
-        wget -q -O /dev/null "$website"
+        wget -q -O /dev/null "$website" >/dev/null 2>&1
 
         if [ $? -eq 0 ]; then
             echo "$website is reachable."
