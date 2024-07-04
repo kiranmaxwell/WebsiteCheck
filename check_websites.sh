@@ -6,7 +6,7 @@ check_connectivity() {
     do
         echo "Browsing $website..."
         wget -q -O /dev/null "$website"
-        
+
         if [ $? -eq 0 ]; then
             echo "$website is reachable."
         else
